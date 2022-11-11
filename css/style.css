@@ -1,0 +1,80 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}
+
+/* *HEADER */
+.header {
+  /* the 95vh mean that at every point
+    the height of this box of this element 
+    should be 95% of the viewport height
+     */
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 11, 0.8),
+      rgba(40,180,131,0.8)
+    ),
+    url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+    /* to make a figure with the background,go to clippi.com */
+  clip-path: polygon(0 0,100% 0,100% 75%,0 100% );
+}
+
+.logo-box{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    position: relative;
+}
+
+.logo{
+    height: 35px;
+}
+
+.text-box{
+    /* position of the bloc */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.heading-primary-main{
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+}
+
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 17.5px;
+}
