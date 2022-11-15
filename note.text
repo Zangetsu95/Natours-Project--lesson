@@ -1,0 +1,5 @@
+npm init
+1)npm install node-sass --save-dev(dev dependecies,node sass is a tool that we use to develop our project)
+if not a tool it would be notic as an dependecies
+2) dowload the project just npm install
+3) npm uninstall "nameofthetool"
