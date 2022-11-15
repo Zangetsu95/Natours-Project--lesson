@@ -1,7 +1,12 @@
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Lato", sans-serif;
@@ -9,7 +14,8 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: #777;
-  padding: 30px; }
+  padding: 30px;
+}
 
 /* *HEADER */
 .header {
@@ -18,20 +24,28 @@ body {
       should be 95% of the viewport height
        */
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
   /* to make a figure with the background,go to clippi.com */
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); }
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+}
 
 .logo-box {
   position: absolute;
   top: 40px;
   left: 40px;
-  position: relative; }
+  position: relative;
+}
 
 .logo {
-  height: 35px; }
+  height: 35px;
+}
 
 .text-box {
   /* position of the bloc */
@@ -39,64 +53,88 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center; }
+  text-align: center;
+}
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   /* for not shaking the animation */
   backface-visibility: hidden;
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+}
 
 .heading-primary-main {
   display: block;
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
+
   /* we have create the animation moveInLeft so we use it like a function */
   animation-name: moveInLeft;
   animation-duration: 1s;
+
   /* animation-timing-function: ease-in-out;
       animation-iteration-count: 3;
-      animation-delay: 3s; */ }
+      animation-delay: 3s; */
+}
 
 .heading-primary-sub {
   display: block;
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 17.5px;
-  animation: moveInRight 1s ease-out; }
+  animation: moveInRight 1s ease-out;
+}
 
 /* animation for the header */
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px); }
+    transform: translateX(-100px);
+  }
+
   80% {
-    transform: translateX(10px); }
+    transform: translateX(10px);
+  }
+
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px); }
+    transform: translateX(100px);
+  }
+
   80% {
-    transform: translateX(-10px); }
+    transform: translateX(-10px);
+  }
+
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
 
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(30px); }
+    transform: translateY(30px);
+  }
+
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
 
 /* */
+
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -105,19 +143,23 @@ body {
   display: inline-block;
   border-radius: 100px;
   transition: all 0.2s;
-  position: relative; }
+  position: relative;
+}
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
 
 .btn-white {
   background-color: #fff;
-  color: #777; }
+  color: #777;
+}
 
 .btn::after {
   content: "";
@@ -129,17 +171,21 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all 0.4s; }
+  transition: all 0.4s;
+}
 
 .btn-white::after {
-  background-color: #fff; }
+  background-color: #fff;
+}
 
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
+  opacity: 0;
+}
 
 .btn-animated {
   /* name of the animation + duration+timing fuction + delay */
   animation: moveInBottom 0.5s ease-out 0.75s;
   /* automatically apply the styles up to zero percent before the animation starts */
-  animation-fill-mode: backwards; }
+  animation-fill-mode: backwards;
+}
