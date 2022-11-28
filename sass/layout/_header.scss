@@ -13,6 +13,7 @@
     background-size: cover;
     background-position: top;
     /* to make a figure with the background,go to clippi.com */
+    -webkit-clip-path : polygon(0 0, 100% 0, 100% 75%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
   
     &__logo-box {
